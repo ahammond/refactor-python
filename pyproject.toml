@@ -1,0 +1,23 @@
+[project]
+name = "coding-challenge-python"
+version = "0.1.0"
+description = "Python code review exercise with user data processing"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "coverage>=7.0.0",
+]
+
+[tool.coverage.run]
+source = ["user_processor"]
+omit = ["test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
